@@ -1,0 +1,27 @@
+{
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 16,
+    "editor.lineHeight": 25,
+    "editor.letterSpacing": 0.5,
+    "files.trimTrailingWhitespace": true,
+    "editor.fontWeight": "400",
+    "prettier.eslintIntegration": true,
+    "editor.cursorStyle": "underline-thin",
+    "editor.cursorBlinking": "solid",
+    "vscode_custom_css.imports":  [
+        "/Volumes/Macintosh HD/Users/wesbos/.vscodestyles.css"
+    ],
+    "editor.renderWhitespace": "all",
+    "workbench.panel.location": "bottom",
+    "terminal.integrated.fontFamily": "'Fira Code'",
+    "terminal.integrated.fontSize": 16,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.activityBar.visible": true,
+    "editor.rulers": [120],
+    "editor.tabSize": 2,
+    "terminal.integrated.scrollback": 100000,
+    "workbench.colorTheme": "Atom One Light",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.statusBar.feedback.visible": false
+}

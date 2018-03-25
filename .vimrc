@@ -7,7 +7,6 @@
 filetype plugin indent on
 
 syntax enable
-colorscheme one
 
 highlight ColorColumn ctermbg=7
 
@@ -33,14 +32,12 @@ set mouse=a
 " Automatically switch between light & dark themes based on the time of day
 let hour = strftime("%H")
 
-if 8 <= hour && hour < 19
-  set background=light
-  if has('gui_running')
+if has('gui_running')
+  colorscheme one
+
+  if 8 <= hour && hour < 19
     set background=light
-  endif
-else
-  set background=dark
-  if has('gui_running')
+  else
     set background=dark
   endif
 endif

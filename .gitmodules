@@ -17,8 +17,8 @@
   path = .vim/bundle/vim-elixir
   url = git@github.com:elixir-editors/vim-elixir.git
 [submodule ".vim/bundle/vim-airline"]
-	path = .vim/bundle/vim-airline
-	url = git@github.com:vim-airline/vim-airline.git
+  path = .vim/bundle/vim-airline
+  url = git@github.com:vim-airline/vim-airline.git
 [submodule ".vim/bundle/vim-vue"]
-	path = .vim/bundle/vim-vue
-	url = git@github.com:posva/vim-vue.git
+  path = .vim/bundle/vim-vue
+  url = git@github.com:posva/vim-vue.git

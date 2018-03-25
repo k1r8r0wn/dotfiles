@@ -1,20 +1,24 @@
 ##########################################
-# Path to your oh-my-zsh installation
+# Settings
 ##########################################
 
+# Path to your oh-my-zsh installation
 ZSH=$HOME/.oh-my-zsh
 
-##########################################
 # Set name of the theme to load
-##########################################
-
 ZSH_THEME="k1r8r0wn"
+
+# Uncomment following line if you want to disable autosetting terminal title.
+DISABLE_AUTO_TITLE="true"
+
+# Uncomment following line if you want to disable command autocorrection
+DISABLE_CORRECTION="true"
 
 ##########################################
 # Plugins
 ##########################################
 
-plugins=(git osx ruby rails bundler brew)
+plugins=(brew bundler docker docker-compose git git-flow heroku osx rails rbenv)
 
 ##########################################
 # Execute source
@@ -26,17 +30,10 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 ##########################################
 
-alias be="bundle exec"
-
-alias dbreset="rails db:drop && rake db:create && rake db:migrate && rake db:seed"
-alias dbmigrate="rails db:migrate"
-
-alias d="docker"
-alias dc="docker-compose"
-alias da="docker attach"
-
 alias icd='~/Library/Mobile\ Documents/com~apple~CloudDocs'
 alias elixir_tuts='~/Library/Mobile\ Documents/com~apple~CloudDocs/Tuts/Elixir'
+
+alias weather='curl http://wttr.in/'
 
 ##########################################
 # Load .rbenv

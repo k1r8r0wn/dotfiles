@@ -42,28 +42,15 @@ if has('gui_running')
   endif
 endif
 
-" Keep more info in memory to speed things up
-"set hidden
-"set history=100
-
-"Set custom Leader key as `Space`
-"let mapleader=" "
-
 " Remove whitespaces on save
-"autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * :%s/\s\+$//e
 
 " ====================
 " Mappings
 " ====================
 
-" Reload Vim config without having to restart editor \" " + s
-"map <leader>s :source ~/.vimrc<CR>
-
-" Ability to cancel a search with `Escape`
-"nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
-
-" Re-open previously opened file
-"nnoremap <Leader><Leader> :e#<CR>
+" Cancel a search with `Ctrl+l`
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 " ====================
 " Pathogen

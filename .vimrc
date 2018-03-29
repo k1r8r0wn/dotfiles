@@ -10,7 +10,8 @@ syntax enable
 
 highlight ColorColumn ctermbg=7
 
-set guifont=Fira_Code:h18            " set the font type and it's size
+set encoding=utf8
+set guifont=Fira_Code:h18
 set colorcolumn=120                  " add a colored column at 120 to avoid going to far to the right
 set clipboard=unnamed                " use os clipboard
 set tabstop=2                        " number of visual spaces per tab
@@ -64,6 +65,7 @@ call pathogen#helptags()
 " ====================
 
 " NERDTree (load on start)
+let g:NERDTreeDirArrows=0
 autocmd VimEnter * NERDTree
 
 " Ctrlp
@@ -71,3 +73,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " Theme for airline
 let g:airline_theme='one'
+
+" Fugitive
+set diffopt+=vertical
+

@@ -20,7 +20,7 @@ $red%(!.#.»)%{$reset_color%} '
 # Right prompt
 ##########################################
 
-RPROMPT='%(?.%{$gray%}.%{$gray%})%*%{$reset_color%}'
+RPROMPT='%(?.%{$gray%}.%{$gray%})%@%{$reset_color%}'
 
 ##########################################
 # Git settings

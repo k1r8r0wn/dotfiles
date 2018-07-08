@@ -34,6 +34,7 @@ alias icd='~/Library/Mobile\ Documents/com~apple~CloudDocs'
 alias elixir_tuts='~/Library/Mobile\ Documents/com~apple~CloudDocs/Tuts/Elixir'
 
 alias weather='curl http://wttr.in/'
+alias oracul='bash ~/oracul.sh'
 
 ##########################################
 # Load .rbenv

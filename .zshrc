@@ -33,11 +33,18 @@ source $ZSH/oh-my-zsh.sh
 alias icd='~/Library/Mobile\ Documents/com~apple~CloudDocs'
 alias elixir_tuts='~/Library/Mobile\ Documents/com~apple~CloudDocs/Tuts/Elixir'
 
-alias weather='curl http://wttr.in/'
+alias weather='curl https://wttr.in/'
 alias oracul='bash ~/oracul.sh'
+alias cht='_(){curl https://cht.sh/$1}; _'
 
 ##########################################
 # Load .rbenv
 ##########################################
 
 eval "$(rbenv init -)"
+
+##########################################
+# Open files in VScode
+##########################################
+
+vscode () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}

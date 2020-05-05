@@ -8,6 +8,9 @@ echo -e "Creating symlinks..."
 # bash_profile
 ln -s ${DOTFILES_DIR}/.bash_profile ~
 
+# fish
+ln -s ${DOTFILES_DIR}/config.fish ~/.config/fish
+
 # zsh
 ln -s ${DOTFILES_DIR}/.zshrc ~
 ln -s ${DOTFILES_DIR}/.oh-my-zsh/themes/k1r8r0wn.zsh-theme ~/.oh-my-zsh/themes

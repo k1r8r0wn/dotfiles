@@ -207,7 +207,7 @@ alias cov='env COVER=1 rspec spec'
 alias spch='rspec --format=html > rspec_tests.html'
 alias spcb='open rspec_tests.html'
 
-function rs
+function rsp
   if count $argv > /dev/null
     if count $argv[2] > /dev/null
       for x in (seq $arg[2]); rspec $argv[1]; end;

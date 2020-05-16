@@ -4,4 +4,5 @@
 .vim/swap/**/*
 
 .vim/viminfo
+.vim/backup
 .vim/.netrwhist

@@ -6,7 +6,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load
-ZSH_THEME='k1r8r0wn'
+ZSH_THEME='robbyrussell'
 
 # Uncomment following line if you want to disable autosetting terminal title.
 DISABLE_AUTO_TITLE='true'
@@ -39,10 +39,25 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 ##########################################
-# Load .rbenv
+# Development stuff
 ##########################################
 
-eval "$(rbenv init -)"
+# RSpec
+alias cov='COVER=1 rspec spec'
+alias spch='rspec --format=html > rspec_tests.html'
+alias spcb='open rspec_tests.html'
+
+function rssp () {
+  if [[ $1 > 0 ]]; then
+    if [[ $2 > 0 ]]; then
+      for i in {1..$2}; do rspec $1; done;
+    else
+      rspec $1
+    fi
+  else
+    rspec spec
+  fi
+}
 
 ##########################################
 # Open files in VScode

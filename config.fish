@@ -150,7 +150,7 @@ alias glp='_git_log_prettily'
 # This function return a warning if the current branch is a wip
 function work_in_progress
   if git log -n 1 | grep -q -c wip; then
-    echo "WIP!!"
+    echo 'WIP!!'
   end
 end
 
@@ -162,7 +162,7 @@ alias gunwip='git log -n 1 | grep -q -c wip; and git reset HEAD~1'
 # Development stuff
 ##########################################
 
-alias be="bundle exec"
+alias be='bundle exec'
 
 alias devlog='tail -f log/development.log'
 alias prodlog='tail -f log/production.log'

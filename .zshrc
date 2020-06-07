@@ -43,19 +43,19 @@ source $ZSH/oh-my-zsh.sh
 ##########################################
 
 # RSpec
-alias cov='COVER=1 rspec spec'
-alias spch='rspec --format=html > rspec_tests.html'
+alias cov='COVER=1 be rspec spec'
+alias spch='be rspec --format=html > rspec_tests.html'
 alias spcb='open rspec_tests.html'
 
-function rssp () {
+function ber () {
   if [[ $1 > 0 ]]; then
     if [[ $2 > 0 ]]; then
-      for i in {1..$2}; do rspec $1; done;
+      for i in {1..$2}; do be rspec $1; done;
     else
-      rspec $1
+      be rspec $1
     fi
   else
-    rspec spec
+    be rspec spec
   fi
 }
 

@@ -162,6 +162,8 @@ alias gunwip='git log -n 1 | grep -q -c wip; and git reset HEAD~1'
 # Development stuff
 ##########################################
 
+alias be="bundle exec"
+
 alias devlog='tail -f log/development.log'
 alias prodlog='tail -f log/production.log'
 alias testlog='tail -f log/test.log'
@@ -203,19 +205,19 @@ alias rmd='rails middleware'
 alias rsts='rails stats'
 
 # RSpec
-alias cov='env COVER=1 rspec spec'
-alias spch='rspec --format=html > rspec_tests.html'
+alias cov='env COVER=1 be rspec spec'
+alias spch='be rspec --format=html > rspec_tests.html'
 alias spcb='open rspec_tests.html'
 
-function rsp
+function ber
   if count $argv > /dev/null
     if count $argv[2] > /dev/null
-      for x in (seq $arg[2]); rspec $argv[1]; end;
+      for x in (seq $arg[2]); be rspec $argv[1]; end;
     else
-      rspec $argv[1]
+      be rspec $argv[1]
     end
   else
-    rspec spec
+    be rspec spec
   end
 end
 

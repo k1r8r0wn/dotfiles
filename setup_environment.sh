@@ -23,6 +23,9 @@ ln -s ${DOTFILES_DIR}/.zshrc ~
 ln -s ${DOTFILES_DIR}/.vimrc ~
 ln -s ${DOTFILES_DIR}/.vim/ ~
 
+# iTerm2
+ln -s ${DOTFILES_DIR}/iTerm2/auto_change_theme.py ~/Library/ApplicationSupport/iTerm2/Scripts/AutoLaunch/
+
 ##########################################
 # Add projects folder
 ##########################################

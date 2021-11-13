@@ -1,0 +1,98 @@
+{
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontSize": 18,
+  "editor.lineHeight": 25,
+  "editor.letterSpacing": 0.5,
+  "files.trimTrailingWhitespace": true,
+  "editor.fontWeight": "400",
+  "editor.renderWhitespace": "all",
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "terminal.integrated.fontSize": 18,
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.rulers": [
+    120
+  ],
+  "editor.tabSize": 2,
+  "terminal.integrated.scrollback": 100000,
+  "editor.cursorBlinking": "phase",
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "ruby.intellisense": "rubyLocate",
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue",
+    "pug"
+  ],
+  "window.zoomLevel": 0,
+  "files.maxMemoryForLargeFilesMB": 10000,
+  "eslint.packageManager": "yarn",
+  "vetur.format.defaultFormatter.js": "none",
+  "breadcrumbs.enabled": true,
+  "editor.fontLigatures": true,
+  "workbench.fontAliasing": "antialiased",
+  "ruby.rubocop.executePath": "/Users/k1r8r0wn/.rbenv/shims/",
+  "diffEditor.ignoreTrimWhitespace": true,
+  "workbench.colorCustomizations": {
+    "activityBarBadge.background": "#616161",
+    "activityBar.activeBorder": "#616161",
+    "list.activeSelectionForeground": "#616161",
+    "list.inactiveSelectionForeground": "#616161",
+    "list.highlightForeground": "#616161",
+    "scrollbarSlider.activeBackground": "#61616150",
+    "editorSuggestWidget.highlightForeground": "#616161",
+    "textLink.foreground": "#616161",
+    "progressBar.background": "#616161",
+    "pickerGroup.foreground": "#616161",
+    "tab.activeBorder": "#616161",
+    "notificationLink.foreground": "#616161",
+    "editorWidget.resizeBorder": "#616161",
+    "editorWidget.border": "#616161",
+    "settings.modifiedItemIndicator": "#616161",
+    "settings.headerForeground": "#616161",
+    "panelTitle.activeBorder": "#616161",
+    "breadcrumb.activeSelectionForeground": "#616161",
+    "menu.selectionForeground": "#616161",
+    "menubar.selectionForeground": "#616161",
+    "editor.findMatchBorder": "#616161",
+    "selection.background": "#61616140",
+    "editor.lineHighlightBackground": "#1073cf2d",
+    "editor.lineHighlightBorder": "#9fced11f"
+  },
+  "materialTheme.accent": "Graphite",
+  "workbench.preferredLightColorTheme": "GitHub Light",
+  "workbench.preferredDarkColorTheme": "GitHub Dark Dimmed",
+  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "files.defaultLanguage": "markdown",
+  "editor.renderIndentGuides": false,
+  "editor.wordWrap": "off",
+  "diffEditor.wordWrap": "off",
+  "blockman.n32BlackListOfFileFormats": "plaintext, markdown, ruby, coffeescript",
+  "blockman.n04ColorComboPreset": "Classic Light (Gradients)",
+  "security.workspace.trust.untrustedFiles": "open",
+  "tabnine.experimentalAutoImports": true,
+  "emmet.excludeLanguages": [
+    "javascript",
+    "markdown"
+  ],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html"
+  },
+  "emmet.preferences": {},
+  "liveServer.settings.donotShowInfoMsg": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.suggestionActions.enabled": false,
+  "editor.inlayHints.enabled": false,
+  "window.autoDetectColorScheme": true,
+  "terminal.integrated.cursorStyle": "line",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
+}

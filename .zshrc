@@ -2,6 +2,8 @@
 # Settings
 ##########################################
 
+export PATH="/usr/local/sbin:$PATH"
+
 # Path to your oh-my-zsh installation
 ZSH=$HOME/.oh-my-zsh
 
@@ -26,10 +28,12 @@ plugins=(
   git
   git-flow
   heroku
-  osx
+  macos
   rails
   rbenv
   zsh-autosuggestions
+  kubectl
+  aws
 )
 
 ##########################################
@@ -63,13 +67,17 @@ function ber () {
 # Open files in VScode
 ##########################################
 
-function vscode () {
+function code () {
   VSCODE_CWD="$PWD" open -n -b 'com.microsoft.VSCode' --args $*
 }
 
 ##########################################
 # Other stuff
 ##########################################
+
+alias oracul="bash ~/oracul.sh"
+alias k="kubectl"
+alias gks="git-quick-stats"
 
 function weather () {
   if [[ $1 > 0 ]]; then
@@ -79,4 +87,11 @@ function weather () {
   fi
 }
 
-alias oracul='bash ~/oracul.sh'
+# https://github.com/arzzen/git-quick-stats
+function impact () {
+  if [[ $1 > 0 ]]; then
+    git log --author="$1" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -
+  else
+    echo "No author name specified"
+  fi
+}

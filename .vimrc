@@ -17,9 +17,10 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'rizzatti/dash.vim'
 Plugin 'bogado/file-line'
-Plugin 'kaicataldo/material.vim'
+Plugin 'cormacrelf/vim-colors-github'
+Plugin 'doums/darcula'
 Plugin 'psliwka/vim-smoothie'
-Plugin 'bling/vim-airline'
+Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-rails.git'
@@ -50,8 +51,27 @@ filetype plugin indent on " required
 " ##########################################
 
 syntax on " Enable syntax highlighting
-colorscheme material
 
+" ChangeBackground changes the background mode based on macOS's `Appearance`
+" setting. We also refresh the statusline colors to reflect the new mode.
+function! ChangeBackground()
+  if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
+    set background=dark " for the dark version of the theme
+    set termguicolors
+    let g:lightline = { 'colorscheme': 'darculaOriginal' }
+    colorscheme darcula
+  else
+    set background=light " for the light version of the theme
+    let g:lightline = { 'colorscheme': 'github' }
+    colorscheme github
+  endif
+endfunction
+
+" initialize the colorscheme for the first run
+call ChangeBackground()
+
+" change the color scheme if we receive a SigUSR1
+autocmd SigUSR1 * call ChangeBackground()
 set encoding=utf8
 set guifont=JetBrains_Mono:h18
 " Add a colored column at 120 to avoid going to far to the right
@@ -74,9 +94,9 @@ set ignorecase
 set smartcase
 
 " Highlight the current line
-set cursorline
+" set cursorline
 " Highlight active column
-set cuc cul
+" set cuc cul
 
 " Tab completion
 set wildmode=list:longest,list:full
@@ -148,9 +168,6 @@ let g:vroom_map_keys = 0
 let g:vroom_use_dispatch = 1
 let g:vroom_use_zeus = 1
 
-" Tune airline
-let g:material_theme_style='darker'
-let g:airline_powerline_fonts=1
 " Speed up ctrl+p
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 " Nerdtree style explorer

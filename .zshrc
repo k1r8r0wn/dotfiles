@@ -76,6 +76,7 @@ function code () {
 ##########################################
 
 alias oracul="bash ~/oracul.sh"
+alias t="type" # check for full command from alias
 alias k="kubectl"
 alias gks="git-quick-stats"
 

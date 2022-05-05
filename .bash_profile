@@ -2,7 +2,7 @@
 # Settings
 ##########################################
 
-export PATH=$HOME/bin:/opt/homebrew/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:/opt/homebrew/bin:/usr/local/bin:$PATH
 
 ##########################################
 # Prompt

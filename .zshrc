@@ -2,7 +2,7 @@
 # Settings
 ##########################################
 
-export PATH=$HOME/bin:/opt/homebrew/bin:/usr/local/bin:$PATH
+#export PATH=/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation
 ZSH=$HOME/.oh-my-zsh
@@ -74,6 +74,11 @@ function code () {
 ##########################################
 # Other stuff
 ##########################################
+export CFLAGS="-Wno-error=implicit-function-declaration"
+export LDFLAGS="-L/usr/local/opt/readline/lib"
+export CPPFLAGS="-I/usr/local/opt/readline/include"
+#export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+RUBY_CONFIGURE_OPTS="--with-readline-dir=/usr/local/opt/readline/"
 
 alias oracul="bash ~/oracul.sh"
 alias t="type" # check for full command from alias

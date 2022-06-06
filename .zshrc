@@ -68,26 +68,27 @@ function ber () {
 ##########################################
 
 function code () {
-  VSCODE_CWD="$PWD" open -n -b 'com.microsoft.VSCode' --args $*
+  VSCODE_CWD='$PWD' open -n -b 'com.microsoft.VSCode' --args $*
 }
 
 ##########################################
 # Other stuff
 ##########################################
-export CFLAGS="-Wno-error=implicit-function-declaration"
-export LDFLAGS="-L/usr/local/opt/readline/lib"
-export CPPFLAGS="-I/usr/local/opt/readline/include"
-#export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
-RUBY_CONFIGURE_OPTS="--with-readline-dir=/usr/local/opt/readline/"
 
-alias oracul="bash ~/oracul.sh"
-alias t="type" # check for full command from alias
-alias k="kubectl"
-alias gks="git-quick-stats"
+# HACK for apple selicon
+export CFLAGS='-Wno-error=implicit-function-declaration'
+export LDFLAGS='-L/usr/local/opt/readline/lib'
+export CPPFLAGS='-I/usr/local/opt/readline/include'
+#export RUBY_CONFIGURE_OPTS='--with-openssl-dir=$(brew --prefix openssl@1.1)'
+export RUBY_CONFIGURE_OPTS='--with-readline-dir=/usr/local/opt/readline/'
+
+alias t='type' # check for full command from alias
+alias dot='cd ~/Projects/self/dotfiles'
+alias gks='git-quick-stats'
 
 function weather () {
   if [[ $1 > 0 ]]; then
-    curl "https://wttr.in/$1"
+    curl 'https://wttr.in/$1'
   else
     curl 'https://wttr.in/saint_petersbourg'
   fi
@@ -96,8 +97,8 @@ function weather () {
 # https://github.com/arzzen/git-quick-stats
 function impact () {
   if [[ $1 > 0 ]]; then
-    git log --author="$1" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -
+    git log --author='$1' --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf 'added lines: %s, removed lines: %s, total lines: %s\n', add, subs, loc }' -
   else
-    echo "No author name specified"
+    echo 'No author name specified'
   fi
 }

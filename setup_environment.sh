@@ -10,29 +10,21 @@ DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 echo -e 'Creating symlinks...'
 
 # bash_profile
-ln -s ${DOTFILES_DIR}/.bash_profile ~
+ln -s ${DOTFILES_DIR}/Projects/self/.bash_profile ~
 
 # fish
-#ln -s ${DOTFILES_DIR}/config.fish ~/.config/fish
+#ln -s ${DOTFILES_DIR}/Projects/self/config.fish ~/.config/fish
 
 # zsh
-ln -s ${DOTFILES_DIR}/.zshrc ~
-# ln -s ${DOTFILES_DIR}/.oh-my-zsh/themes/k1r8r0wn.zsh-theme ~/.oh-my-zsh/themes
+ln -s ${DOTFILES_DIR}/Projects/self/.zshrc ~
+# ln -s ${DOTFILES_DIR}/Projects/self/.oh-my-zsh/themes/k1r8r0wn.zsh-theme ~/.oh-my-zsh/themes
 
 # vim
-ln -s ${DOTFILES_DIR}/.vimrc ~
-ln -s ${DOTFILES_DIR}/.vim/ ~
+ln -s ${DOTFILES_DIR}/Projects/self/.vimrc ~
+ln -s ${DOTFILES_DIR}/Projects/self/.vim/ ~
 
-# iTerm2
-ln -s ${DOTFILES_DIR}/iTerm2/auto_change_theme.py ~/Library/ApplicationSupport/iTerm2/Scripts/AutoLaunch/
-
-##########################################
-# Add projects folder
-##########################################
-
-echo -e 'Creating projects folder...'
-
-mkdir ~/Projects
+# HACK for iTerm2 < v3.5.0.beta
+# ln -s ${DOTFILES_DIR}/iTerm2/auto_change_theme.py ~/Library/ApplicationSupport/iTerm2/Scripts/AutoLaunch/
 
 ##########################################
 # Install Homebrew

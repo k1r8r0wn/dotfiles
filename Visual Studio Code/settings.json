@@ -15,8 +15,6 @@
   "editor.tabSize": 2,
   "terminal.integrated.scrollback": 100000,
   "editor.cursorBlinking": "phase",
-  "telemetry.enableTelemetry": false,
-  "telemetry.enableCrashReporter": false,
   "ruby.intellisense": "rubyLocate",
   "eslint.alwaysShowStatus": true,
   "eslint.validate": [
@@ -28,21 +26,16 @@
   "window.zoomLevel": 0,
   "files.maxMemoryForLargeFilesMB": 10000,
   "eslint.packageManager": "yarn",
-
   "breadcrumbs.enabled": true,
   "editor.fontLigatures": true,
   "workbench.fontAliasing": "antialiased",
-  "ruby.rubocop.executePath": "/Users/k1r8r0wn/.rbenv/shims/",
   "diffEditor.ignoreTrimWhitespace": true,
   "workbench.preferredLightColorTheme": "GitHub Light",
   "workbench.preferredDarkColorTheme": "Darcula",
   "workbench.colorTheme": "Darcula",
   "files.defaultLanguage": "markdown",
-  "editor.renderIndentGuides": false,
   "editor.wordWrap": "off",
   "diffEditor.wordWrap": "off",
-  "blockman.n32BlackListOfFileFormats": "plaintext, markdown, ruby, coffeescript",
-  "blockman.n04ColorComboPreset": "Classic Light (Gradients)",
   "security.workspace.trust.untrustedFiles": "open",
   "tabnine.experimentalAutoImports": true,
   "emmet.excludeLanguages": [
@@ -55,18 +48,42 @@
   },
   "emmet.preferences": {},
   "liveServer.settings.donotShowInfoMsg": true,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "javascript.suggestionActions.enabled": false,
-  "editor.inlayHints.enabled": false,
+  "editor.inlayHints.enabled": "off",
   "window.autoDetectColorScheme": true,
   "terminal.integrated.cursorStyle": "line",
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "terminal.external.osxExec": "iTerm2.app"
+  "terminal.external.osxExec": "iTerm2.app",
+  "gitlens.currentLine.enabled": false,
+  "gitlens.currentLine.pullRequests.enabled": false,
+  "gitlens.currentLine.scrollable": false,
+  "gitlens.views.fileHistory.files.compact": false,
+  "gitlens.views.fileHistory.avatars": false,
+  "gitlens.views.lineHistory.avatars": false,
+  "gitlens.views.contributors.pullRequests.enabled": false,
+  "gitlens.views.contributors.pullRequests.showForCommits": false,
+  "gitlens.views.contributors.files.compact": false,
+  "gitlens.views.contributors.avatars": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "editor.formatOnSaveTimeout": 5000,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "workbench.preferredHighContrastColorTheme": "Darcula",
+  "editor.guides.indentation": false,
+  "editor.codeActionsOnSave": {},
+  "ruby.rubocop.executePath": "/Users/k1r8r0wn/.rbenv/shims/",
+  "editor.formatOnSave": true,
+  "editor.language.colorizedBracketPairs": [],
+  "[ruby]": {
+    "editor.defaultFormatter": "misogi.ruby-rubocop"
+  },
+  "json.schemas": [],
+  "code-runner.enableAppInsights": false,
+  "telemetry.telemetryLevel": "off"
 }

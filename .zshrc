@@ -4,6 +4,12 @@
 
 export PATH=/usr/local/bin:$PATH
 
+# HACK for Apple M1
+export CFLAGS='-Wno-error=implicit-function-declaration'
+export LDFLAGS='-L/usr/local/opt/readline/lib'
+export CPPFLAGS='-I/usr/local/opt/readline/include'
+export RUBY_CONFIGURE_OPTS='--with-readline-dir=/usr/local/opt/readline/'
+
 # Path to your oh-my-zsh installation
 ZSH=$HOME/.oh-my-zsh
 
@@ -43,13 +49,34 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 ##########################################
-# Development stuff
+# Aliases
 ##########################################
 
+# System
+alias t='type' # check for full command from alias
+
+alias ll='ls -lh'
+alias la='ls -lah'
+
+alias ..='cd ../'
+alias ...='cd ../../'
+alias self='cd ~/Projects/self'
+alias os='cd ~/Projects/os'
+alias dot='cd ~/Projects/self/dotfiles'
+
+alias v='vim'
+alias gks='git-quick-stats' # https://github.com/arzzen/git-quick-stats
+
 # RSpec
+alias b='bundle'
 alias cov='COVER=1 be rspec spec'
+
 alias spch='be rspec --format=html > rspec_tests.html'
 alias spcb='open rspec_tests.html'
+
+##########################################
+# Functions
+##########################################
 
 function ber () {
   if [[ $1 > 0 ]]; then
@@ -63,28 +90,9 @@ function ber () {
   fi
 }
 
-##########################################
-# Open files in VScode
-##########################################
-
 function code () {
   VSCODE_CWD='$PWD' open -n -b 'com.microsoft.VSCode' --args $*
 }
-
-##########################################
-# Other stuff
-##########################################
-
-# HACK for apple selicon
-export CFLAGS='-Wno-error=implicit-function-declaration'
-export LDFLAGS='-L/usr/local/opt/readline/lib'
-export CPPFLAGS='-I/usr/local/opt/readline/include'
-#export RUBY_CONFIGURE_OPTS='--with-openssl-dir=$(brew --prefix openssl@1.1)'
-export RUBY_CONFIGURE_OPTS='--with-readline-dir=/usr/local/opt/readline/'
-
-alias t='type' # check for full command from alias
-alias dot='cd ~/Projects/self/dotfiles'
-alias gks='git-quick-stats'
 
 function weather () {
   if [[ $1 > 0 ]]; then
@@ -94,10 +102,9 @@ function weather () {
   fi
 }
 
-# https://github.com/arzzen/git-quick-stats
 function impact () {
   if [[ $1 > 0 ]]; then
-    git log --author='$1' --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf 'added lines: %s, removed lines: %s, total lines: %s\n', add, subs, loc }' -
+    git log --author="$1" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -
   else
     echo 'No author name specified'
   fi

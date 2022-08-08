@@ -10,6 +10,12 @@ export LDFLAGS='-L/usr/local/opt/readline/lib'
 export CPPFLAGS='-I/usr/local/opt/readline/include'
 export RUBY_CONFIGURE_OPTS='--with-readline-dir=/usr/local/opt/readline/'
 
+# NVM stuff
+# export NVM_DIR="$HOME/.nvm"
+# source $(brew --prefix nvm)/nvm.sh
+# [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+# [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 # Path to your oh-my-zsh installation
 ZSH=$HOME/.oh-my-zsh
 
@@ -73,6 +79,9 @@ alias cov='COVER=1 be rspec spec'
 
 alias spch='be rspec --format=html > rspec_tests.html'
 alias spcb='open rspec_tests.html'
+
+# Rubocop
+alias re='rubocop \--auto-gen-config \--auto-gen-only-exclude \--exclude-limit=10000'
 
 ##########################################
 # Functions

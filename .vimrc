@@ -24,7 +24,6 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-rails.git'
-" Plugin 'garbas/vim-snipmate'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-surround'
@@ -38,6 +37,7 @@ Plugin 'mattn/webapi-vim'
 Plugin 'danro/rename.vim'
 Plugin 'nono/vim-handlebars'
 Plugin 'scrooloose/syntastic'
+" Plugin 'garbas/vim-snipmate'
 " Plugin 'mattn/gist-vim'
 " Plugin 'kchmck/vim-coffee-script'
 " Plugin 'zxqfl/tabnine-vim'
@@ -179,6 +179,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 " let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['ruby'] }
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 
 " ##########################################

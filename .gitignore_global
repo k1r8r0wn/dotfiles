@@ -1,0 +1,6 @@
+*~
+.DS_Store
+
+# Code editor's & IDE's
+.vscode
+.idea

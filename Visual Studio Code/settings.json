@@ -10,7 +10,7 @@
   "terminal.integrated.fontSize": 18,
   "workbench.startupEditor": "newUntitledFile",
   "editor.rulers": [
-    120
+    140
   ],
   "editor.tabSize": 2,
   "terminal.integrated.scrollback": 100000,
@@ -23,9 +23,9 @@
     "vue",
     "pug"
   ],
+  "eslint.format.enable": true,
   "window.zoomLevel": 0,
   "files.maxMemoryForLargeFilesMB": 10000,
-  "eslint.packageManager": "yarn",
   "breadcrumbs.enabled": true,
   "editor.fontLigatures": true,
   "workbench.fontAliasing": "antialiased",
@@ -37,7 +37,6 @@
   "editor.wordWrap": "off",
   "diffEditor.wordWrap": "off",
   "security.workspace.trust.untrustedFiles": "open",
-  "tabnine.experimentalAutoImports": true,
   "emmet.excludeLanguages": [
     "javascript",
     "markdown"
@@ -47,7 +46,6 @@
     "vue-html": "html"
   },
   "emmet.preferences": {},
-  "liveServer.settings.donotShowInfoMsg": true,
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
@@ -72,18 +70,61 @@
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
-  "editor.formatOnSaveTimeout": 5000,
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "workbench.preferredHighContrastColorTheme": "Darcula",
   "editor.guides.indentation": false,
-  "editor.codeActionsOnSave": {},
-  "ruby.rubocop.executePath": "/Users/k1r8r0wn/.rbenv/shims/",
-  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+  },
   "editor.language.colorizedBracketPairs": [],
   "[ruby]": {
     "editor.defaultFormatter": "misogi.ruby-rubocop"
   },
   "json.schemas": [],
   "code-runner.enableAppInsights": false,
-  "telemetry.telemetryLevel": "off"
+  "telemetry.telemetryLevel": "off",
+  "auto-close-tag.excludedTags": [
+    "area",
+    "base",
+    "br",
+    "col",
+    "command",
+    "embed",
+    "hr",
+    "img",
+    "input",
+    "keygen",
+    "link",
+    "meta",
+    "param",
+    "source",
+    "track",
+    "wbr"
+  ],
+  "gitlens.gitCommands.skipConfirmations": [
+    "fetch:command",
+    "stash-push:command",
+    "switch:command",
+    "branch-create:command"
+  ],
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "[scss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "stylelint.snippet": [
+    "css",
+    "less",
+    "postcss",
+    "scss"
+  ],
+  "stylelint.validate": [
+    "css",
+    "less",
+    "postcss",
+    "scss"
+  ],
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  }
 }

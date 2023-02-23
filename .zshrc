@@ -2,9 +2,8 @@
 # Settings
 ##########################################
 
-
 # Homebrew stuff
-export PATH="$PATH:/opt/homebrew/bin/"
+export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
 
 # Path to your oh-my-zsh installation

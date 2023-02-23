@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-tap 'heroku/brew'
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/core'
@@ -16,7 +15,6 @@ brew 'yarn'
 brew 'rbenv'
 brew 'postgresql', restart_service: true
 brew 'redis', restart_service: true
-brew 'heroku/brew/heroku'
 brew 'kubectl'
 
 cask 'google-chrome'

@@ -15,7 +15,6 @@
   "editor.tabSize": 2,
   "terminal.integrated.scrollback": 100000,
   "editor.cursorBlinking": "phase",
-  "ruby.intellisense": "rubyLocate",
   "eslint.alwaysShowStatus": true,
   "eslint.validate": [
     "javascript",
@@ -24,7 +23,6 @@
     "pug"
   ],
   "eslint.format.enable": true,
-  "window.zoomLevel": 0,
   "files.maxMemoryForLargeFilesMB": 10000,
   "breadcrumbs.enabled": true,
   "editor.fontLigatures": true,
@@ -32,7 +30,7 @@
   "diffEditor.ignoreTrimWhitespace": true,
   "workbench.preferredLightColorTheme": "GitHub Light",
   "workbench.preferredDarkColorTheme": "Darcula",
-  "workbench.colorTheme": "Darcula",
+  "workbench.colorTheme": "GitHub Light",
   "files.defaultLanguage": "markdown",
   "editor.wordWrap": "off",
   "diffEditor.wordWrap": "off",
@@ -73,8 +71,6 @@
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "workbench.preferredHighContrastColorTheme": "Darcula",
   "editor.guides.indentation": false,
-  "editor.codeActionsOnSave": {
-  },
   "editor.language.colorizedBracketPairs": [],
   "[ruby]": {
     "editor.defaultFormatter": "misogi.ruby-rubocop"
@@ -126,5 +122,28 @@
   ],
   "[javascriptreact]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "git.autofetch": true,
+  "solargraph.definitions": false, // This actualy enables go to on click
+  "solargraph.folding": false,
+  "solargraph.hover": false,
+  "solargraph.externalServer": {
+    "host": "localhost",
+    "port": 7658
+  },
+  "ruby.useLanguageServer": true,
+  "ruby.intellisense": "rubyLocate",
+  "gitlens.views.commits.avatars": false,
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+        "foreground": "#ffbe31",
+        "iconColour": "#ffbe31",
+        "gutterIcon": true
+    },
+    "HACK": {
+        "foreground": "#ec210f",
+        "iconColour": "#ec210f",
+        "gutterIcon": true
+    }
   }
 }

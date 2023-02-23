@@ -2,19 +2,10 @@
 # Settings
 ##########################################
 
-export PATH=/usr/local/bin:$PATH
 
-# HACK for Apple M1
-export CFLAGS='-Wno-error=implicit-function-declaration'
-export LDFLAGS='-L/usr/local/opt/readline/lib'
-export CPPFLAGS='-I/usr/local/opt/readline/include'
-export RUBY_CONFIGURE_OPTS='--with-readline-dir=/usr/local/opt/readline/'
-
-# NVM stuff
-# export NVM_DIR="$HOME/.nvm"
-# source $(brew --prefix nvm)/nvm.sh
-# [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-# [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+# Homebrew stuff
+export PATH="$PATH:/opt/homebrew/bin/"
+export PATH="/opt/homebrew/sbin:$PATH"
 
 # Path to your oh-my-zsh installation
 ZSH=$HOME/.oh-my-zsh
@@ -39,7 +30,6 @@ plugins=(
   docker-compose
   git
   git-flow
-  heroku
   macos
   rails
   rbenv
@@ -83,6 +73,9 @@ alias spcb='open rspec_tests.html'
 # Rubocop
 alias re='rubocop \--auto-gen-config \--auto-gen-only-exclude \--exclude-limit=10000'
 
+# Dev logs
+alias logs='tail -f log/development.log'
+
 ##########################################
 # Functions
 ##########################################
@@ -118,3 +111,9 @@ function impact () {
     echo 'No author name specified'
   fi
 }
+
+##########################################
+# Private stuff
+##########################################
+
+source $HOME/.zshrc-private

@@ -55,6 +55,7 @@ alias la='ls -lah'
 
 alias ..='cd ../'
 alias ...='cd ../../'
+alias pro='cd ~/Projects'
 alias self='cd ~/Projects/self'
 alias os='cd ~/Projects/os'
 alias dot='cd ~/Projects/self/dotfiles'

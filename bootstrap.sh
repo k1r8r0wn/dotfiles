@@ -26,8 +26,8 @@ sh -c '$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 echo -e 'Creating symlinks...'
 
 # For Git stuff
-ln -s ${DOTFILES_DIR}/.dotfiles/.gitconfig ~/.gitconfig
-ln -s ${DOTFILES_DIR}/.dotfiles/.gitignore_global ~/.gitignore_global
+ln -s ${DOTFILES_DIR}/.dotfiles/Git/.gitconfig ~/.gitconfig
+ln -s ${DOTFILES_DIR}/.dotfiles/Git/.gitignore_global ~/.gitignore_global
 
 # For Zsh
 ln -s ${DOTFILES_DIR}/.dotfiles/.zshrc ~/.zshrc

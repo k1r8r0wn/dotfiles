@@ -51,6 +51,8 @@ source $ZSH/oh-my-zsh.sh
 # System
 alias t='type' # check for full command from alias
 
+alias c='clear'
+
 alias ll='ls -lh'
 alias la='ls -lah'
 
@@ -61,7 +63,9 @@ alias self='cd ~/Projects/self'
 alias os='cd ~/Projects/os'
 alias dot='cd ~/Projects/self/dotfiles'
 
-alias v='vim'
+alias v='nvim'
+alias nv='nvim'
+
 alias gks='git-quick-stats' # https://github.com/arzzen/git-quick-stats
 
 # RSpec

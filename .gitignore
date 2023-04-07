@@ -1,8 +1,2 @@
 .DS_Store
-.vim/bundle/**/*
-.vim/undo/**/*
-.vim/swap/**/*
-
-.vim/viminfo
-.vim/backup
-.vim/.netrwhist
+Vim/.vim/**/*

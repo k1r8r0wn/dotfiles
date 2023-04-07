@@ -33,8 +33,8 @@ ln -s ${DOTFILES_DIR}/.dotfiles/Git/.gitignore_global ~/.gitignore_global
 ln -s ${DOTFILES_DIR}/.dotfiles/.zshrc ~/.zshrc
 
 # For Vim
-ln -s ${DOTFILES_DIR}/.dotfiles/.vimrc ~/.vimrc
-ln -s ${DOTFILES_DIR}/.dotfiles/.vim ~/.vim
+ln -s ${DOTFILES_DIR}/.dotfiles/Vim/.vimrc ~/.vimrc
+ln -s ${DOTFILES_DIR}/.dotfiles/Vim/.vim ~/.vim
 
 # HACK Uncomment this for iTerm2 < v3.5.0.beta
 # ln -s ${DOTFILES_DIR}/iTerm2/auto_change_theme.py ~/Library/ApplicationSupport/iTerm2/Scripts/AutoLaunch/

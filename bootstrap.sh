@@ -36,6 +36,10 @@ ln -s ${DOTFILES_DIR}/.dotfiles/.zshrc ~/.zshrc
 ln -s ${DOTFILES_DIR}/.dotfiles/Vim/.vimrc ~/.vimrc
 ln -s ${DOTFILES_DIR}/.dotfiles/Vim/.vim ~/.vim
 
+# For Tmux
+ln -s ${DOTFILES_DIR}/.dotfiles/.tmux.conf ~/.tmux.conf
+ln -s ${DOTFILES_DIR}/.dotfiles/.tmux ~/.tmux
+
 # HACK Uncomment this for iTerm2 < v3.5.0.beta
 # ln -s ${DOTFILES_DIR}/iTerm2/auto_change_theme.py ~/Library/ApplicationSupport/iTerm2/Scripts/AutoLaunch/
 

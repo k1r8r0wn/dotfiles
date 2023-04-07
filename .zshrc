@@ -24,6 +24,7 @@ DISABLE_CORRECTION='true'
 
 plugins=(
   brew
+  tmux
   bundler
   docker
   docker-compose

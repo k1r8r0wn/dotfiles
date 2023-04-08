@@ -36,6 +36,10 @@ ln -s ${DOTFILES_DIR}/.dotfiles/.zshrc ~/.zshrc
 ln -s ${DOTFILES_DIR}/.dotfiles/Vim/.vimrc ~/.vimrc
 ln -s ${DOTFILES_DIR}/.dotfiles/Vim/.vim ~/.vim
 
+# For NeoVim
+mkdir -p ~/.config
+ln -s ${DOTFILES_DIR}/.dotfiles/Nvim/nvim/ ~/.config/nvim
+
 # For Tmux
 ln -s ${DOTFILES_DIR}/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ${DOTFILES_DIR}/.dotfiles/.tmux ~/.tmux

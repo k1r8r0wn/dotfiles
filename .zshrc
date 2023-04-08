@@ -5,6 +5,7 @@
 # Homebrew stuff
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
+export PATH="/Users/k1r8r0wn/.local/bin:$PATH"
 
 # Path to your oh-my-zsh installation
 ZSH=$HOME/.oh-my-zsh
@@ -34,6 +35,8 @@ plugins=(
   rails
   rbenv
   zsh-autosuggestions
+  zsh-syntax-highlighting
+  web-search
   kubectl
   aws
 )

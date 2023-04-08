@@ -5,7 +5,6 @@
 # Homebrew stuff
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
-export PATH="/Users/k1r8r0wn/.local/bin:$PATH"
 
 # Path to your oh-my-zsh installation
 ZSH=$HOME/.oh-my-zsh
@@ -65,10 +64,11 @@ alias pro='cd ~/Projects'
 alias self='cd ~/Projects/self'
 alias os='cd ~/Projects/os'
 alias dot='cd ~/Projects/self/dotfiles'
+alias tuts='cd ~/Tuts'
 
 alias v='nvim'
 alias nv='nvim'
-
+alias vim='nvim'
 alias gks='git-quick-stats' # https://github.com/arzzen/git-quick-stats
 
 # RSpec

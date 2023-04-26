@@ -20,7 +20,7 @@ Plugin 'bogado/file-line'
 Plugin 'cormacrelf/vim-colors-github'
 Plugin 'doums/darcula'
 Plugin 'psliwka/vim-smoothie'
-Plugin 'itchyny/lightline.vim'
+"  Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-rails.git'
@@ -37,7 +37,7 @@ Plugin 'mattn/webapi-vim'
 Plugin 'danro/rename.vim'
 Plugin 'nono/vim-handlebars'
 Plugin 'scrooloose/syntastic'
-Plugin 'altercation/vim-colors-solarized'
+"  Plugin 'altercation/vim-colors-solarized'
 " Plugin 'garbas/vim-snipmate'
 " Plugin 'mattn/gist-vim'
 " Plugin 'kchmck/vim-coffee-script'
@@ -53,24 +53,24 @@ filetype plugin indent on " required
 
 syntax on " Enable syntax highlighting
 
-set background=dark
-colorscheme solarized
-let g:lightline = { 'colorscheme': 'solarized' }
+"  set background=dark
+"  colorscheme solarized
+"  let g:lightline = { 'colorscheme': 'solarized' }
 
 " ChangeBackground changes the background mode based on macOS's `Appearance`
 " setting. We also refresh the statusline colors to reflect the new mode.
-function! ChangeBackground()
-  if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
-    set background=dark " for the dark version of the theme
-    set termguicolors
-    let g:lightline = { 'colorscheme': 'solarized' }
-    colorscheme solarized
-  else
-    set background=light " for the light version of the theme
-    let g:lightline = { 'colorscheme': 'solarized' }
-    colorscheme solarized
-  endif
-endfunction
+"  function! ChangeBackground()
+"    if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
+"      set background=dark " for the dark version of the theme
+"      set termguicolors
+"      let g:lightline = { 'colorscheme': 'solarized' }
+"      colorscheme solarized
+"    else
+"      set background=light " for the light version of the theme
+"      let g:lightline = { 'colorscheme': 'solarized' }
+"      colorscheme solarized
+"    endif
+"  endfunction
 
 " initialize the colorscheme for the first run
 "call ChangeBackground()

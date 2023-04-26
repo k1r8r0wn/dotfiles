@@ -68,7 +68,6 @@ alias tuts='cd ~/Tuts'
 
 alias v='nvim'
 alias nv='nvim'
-alias vim='nvim'
 alias gks='git-quick-stats' # https://github.com/arzzen/git-quick-stats
 
 # RSpec

@@ -3,14 +3,17 @@
 ##########################################
 
 # Homebrew stuff
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/opt/homebrew/sbin:$PATH"
+export PATH=/opt/homebrew/bin:$PATH
+export PATH=/opt/homebrew/sbin:$PATH
+
+# For custom k9s themes
+export XDG_CONFIG_HOME=$HOME/.config
 
 # Path to your oh-my-zsh installation
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load
-ZSH_THEME='robbyrussell'
+ZSH_THEME='arrow'
 
 # Uncomment following line if you want to disable autosetting terminal title.
 DISABLE_AUTO_TITLE='true'
@@ -64,7 +67,7 @@ alias pro='cd ~/Projects'
 alias self='cd ~/Projects/self'
 alias os='cd ~/Projects/os'
 alias dot='cd ~/Projects/self/dotfiles'
-alias tuts='cd ~/Tuts'
+alias tuts='cd ~/Projects/tuts'
 
 alias v='nvim'
 alias nv='nvim'
@@ -115,7 +118,7 @@ function impact () {
   if [[ $1 > 0 ]]; then
     git log --author="$1" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -
   else
-    echo 'No author name specified'
+    echo 'No author name specified.'
   fi
 }
 

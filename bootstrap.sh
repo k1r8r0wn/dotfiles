@@ -25,22 +25,25 @@ sh -c '$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 echo -e 'Creating symlinks...'
 
-# For Git stuff
+# IRB
+ln -s ${DOTFILES_DIR}/.dotfiles/Git/.irbrc ~/.irbrc
+
+# Git stuff
 ln -s ${DOTFILES_DIR}/.dotfiles/Git/.gitconfig ~/.gitconfig
 ln -s ${DOTFILES_DIR}/.dotfiles/Git/.gitignore_global ~/.gitignore_global
 
-# For Zsh
+# Zsh
 ln -s ${DOTFILES_DIR}/.dotfiles/.zshrc ~/.zshrc
 
-# For Vim
+# Vim
 ln -s ${DOTFILES_DIR}/.dotfiles/Vim/.vimrc ~/.vimrc
 ln -s ${DOTFILES_DIR}/.dotfiles/Vim/.vim ~/.vim
 
-# For NeoVim
+# NeoVim
 mkdir -p ~/.config
 ln -s ${DOTFILES_DIR}/.dotfiles/Nvim/nvim/ ~/.config/nvim
 
-# For Tmux
+# Tmux
 ln -s ${DOTFILES_DIR}/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ${DOTFILES_DIR}/.dotfiles/.tmux ~/.tmux
 

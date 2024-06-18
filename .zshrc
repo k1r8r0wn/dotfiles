@@ -82,8 +82,7 @@ alias os='cd ~/Projects/os'
 alias dot='cd ~/Projects/self/dotfiles'
 alias tuts='cd ~/Projects/tuts'
 
-alias v='nvim'
-alias nv='nvim'
+alias v='vim'
 alias gks='git-quick-stats' # https://github.com/arzzen/git-quick-stats
 
 # Gems

@@ -1,0 +1,27 @@
+[user]
+  name =
+  email =
+[mergetool]
+  keepBackup = false
+  prompt = false
+[merge]
+  tool = vimdiff
+  conflictstyle = diff3
+[difftool]
+  prompt = true
+[color]
+  ui = auto
+[core]
+	editor = vim
+  excludesfile = ~/.gitignore_global
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+[commit]
+  template =
+[init]
+  defaultBranch = main
+[url "ssh://git@github.com"]
+  insteadOf = https://github.com
+[push]
+  default = current

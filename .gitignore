@@ -1,4 +1,4 @@
 .DS_Store
 Vim/.vim/**
 Tmux/.tmux/**
-Nvim/nvim/plugin/packer_compiled.lua
+Git/.gitconfig

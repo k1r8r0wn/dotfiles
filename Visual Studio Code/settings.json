@@ -15,7 +15,6 @@
   "editor.tabSize": 2,
   "terminal.integrated.scrollback": 100000,
   "editor.cursorBlinking": "phase",
-  "eslint.alwaysShowStatus": true,
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -23,14 +22,12 @@
     "pug"
   ],
   "eslint.format.enable": true,
-  "files.maxMemoryForLargeFilesMB": 10000,
   "breadcrumbs.enabled": true,
   "editor.fontLigatures": true,
   "workbench.fontAliasing": "antialiased",
-  "diffEditor.ignoreTrimWhitespace": true,
-  "workbench.preferredLightColorTheme": "GitHub Light",
-  "workbench.preferredDarkColorTheme": "Darcula",
-  "workbench.colorTheme": "GitHub Light",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.preferredLightColorTheme": "Default Light Modern",
+  "workbench.preferredDarkColorTheme": "Default Dark Modern",
   "files.defaultLanguage": "markdown",
   "editor.wordWrap": "off",
   "diffEditor.wordWrap": "off",
@@ -41,7 +38,8 @@
   ],
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
-    "vue-html": "html"
+    "vue-html": "html",
+    "html.erb": "html"
   },
   "emmet.preferences": {},
   "[jsonc]": {
@@ -54,26 +52,23 @@
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "terminal.external.osxExec": "iTerm2.app",
-  "gitlens.currentLine.enabled": false,
-  "gitlens.currentLine.pullRequests.enabled": false,
-  "gitlens.currentLine.scrollable": false,
-  "gitlens.views.fileHistory.files.compact": false,
-  "gitlens.views.fileHistory.avatars": false,
-  "gitlens.views.lineHistory.avatars": false,
-  "gitlens.views.contributors.pullRequests.enabled": false,
-  "gitlens.views.contributors.pullRequests.showForCommits": false,
-  "gitlens.views.contributors.files.compact": false,
-  "gitlens.views.contributors.avatars": false,
-  "gitlens.codeLens.authors.enabled": false,
-  "gitlens.codeLens.enabled": false,
-  "gitlens.codeLens.recentChange.enabled": false,
+
   "editor.unicodeHighlight.ambiguousCharacters": false,
-  "workbench.preferredHighContrastColorTheme": "Darcula",
   "editor.guides.indentation": false,
   "editor.language.colorizedBracketPairs": [],
   "[ruby]": {
-    "editor.defaultFormatter": "misogi.ruby-rubocop"
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "editor.rulers": [
+      120
+    ],
+    "editor.semanticHighlighting.enabled": true
   },
   "json.schemas": [],
   "code-runner.enableAppInsights": false,
@@ -95,12 +90,6 @@
     "source",
     "track",
     "wbr"
-  ],
-  "gitlens.gitCommands.skipConfirmations": [
-    "fetch:command",
-    "stash-push:command",
-    "switch:command",
-    "branch-create:command"
   ],
   "css.validate": false,
   "less.validate": false,
@@ -127,13 +116,8 @@
   "solargraph.definitions": false, // This actualy enables go to on click
   "solargraph.folding": false,
   "solargraph.hover": false,
-  "solargraph.externalServer": {
-    "host": "localhost",
-    "port": 7658
-  },
   "ruby.useLanguageServer": true,
   "ruby.intellisense": "rubyLocate",
-  "gitlens.views.commits.avatars": false,
   "todo-tree.highlights.customHighlight": {
     "TODO": {
         "foreground": "#ffbe31",
@@ -145,5 +129,55 @@
         "iconColour": "#ec210f",
         "gutterIcon": true
     }
-  }
+  },
+  "remote.extensionKind": {
+    "pub.name": [
+      "ui"
+    ]
+  },
+  "workbench.preferredHighContrastLightColorTheme": "Solarized Light",
+  "code-runner.executorMapByFileExtension": {
+    ".vb": "cd $dir && vbc /nologo $fileName && $dir$fileNameWithoutExt",
+    ".vbs": "cscript //Nologo",
+    ".scala": "scala",
+    ".jl": "julia",
+    ".cr": "crystal",
+    ".ml": "ocaml",
+    ".zig": "zig run",
+    ".exs": "elixir",
+    ".hx": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    ".rkt": "racket",
+    ".scm": "csi -script",
+    ".ahk": "autohotkey",
+    ".au3": "autoit3",
+    ".kt": "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar",
+    ".kts": "kotlinc -script",
+    ".dart": "dart",
+    ".pas": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    ".pp": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    ".d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    ".hs": "runhaskell",
+    ".nim": "nim compile --verbosity:0 --hints:off --run",
+    ".csproj": "dotnet run --project",
+    ".fsproj": "dotnet run --project",
+    ".lisp": "sbcl --script",
+    ".kit": "kitc --run",
+    ".v": "v run",
+    ".vsh": "v run",
+    ".sass": "sass --style expanded",
+    ".cu": "cd $dir && nvcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    ".ring": "ring",
+    ".sml": "cd $dir && sml $fileName"
+  },
+  "http.proxyAuthorization": null,
+  "solargraph.diagnostics": true,
+  "solargraph.transport": "stdio",
+  "database-client.showProcedure": false,
+  "database-client.showFunction": false,
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "rubyLsp.yjit": false,
+  "markdown.preview.doubleClickToSwitchToEditor": false,
+  "markdown.preview.fontFamily": "SF Mono",
+  "workbench.activityBar.location": "top",
+  "explorer.confirmDelete": false,
 }

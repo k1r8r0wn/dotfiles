@@ -26,28 +26,22 @@ sh -c '$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 echo -e 'Creating symlinks...'
 
 # IRB
-ln -s ${DOTFILES_DIR}/.dotfiles/Git/.irbrc ~/.irbrc
+ln -s ${DOTFILES_DIR}/Git/.irbrc ~/.irbrc
 
 # Git stuff
-ln -s ${DOTFILES_DIR}/.dotfiles/Git/.gitconfig ~/.gitconfig
-ln -s ${DOTFILES_DIR}/.dotfiles/Git/.gitignore_global ~/.gitignore_global
+cp ${DOTFILES_DIR}/Git/.gitconfig-example ${DOTFILES_DIR}/Git/.gitconfig
+ln -s ${DOTFILES_DIR}/Git/.gitconfig ~/.gitconfig
+ln -s ${DOTFILES_DIR}/Git/.gitignore_global ~/.gitignore_global
 
 # Zsh
-ln -s ${DOTFILES_DIR}/.dotfiles/.zshrc ~/.zshrc
+ln -s ${DOTFILES_DIR}/.zshrc ~/.zshrc
 
 # Vim
-ln -s ${DOTFILES_DIR}/.dotfiles/Vim/.vimrc ~/.vimrc
-ln -s ${DOTFILES_DIR}/.dotfiles/Vim/.vim ~/.vim
-
-# NeoVim
-mkdir -p ~/.config
-ln -s ${DOTFILES_DIR}/.dotfiles/Nvim/nvim/ ~/.config/nvim
+ln -s ${DOTFILES_DIR}/Vim/.vimrc ~/.vimrc
+ln -s ${DOTFILES_DIR}/Vim/.vim ~/.vim
 
 # Tmux
-ln -s ${DOTFILES_DIR}/.dotfiles/.tmux.conf ~/.tmux.conf
-ln -s ${DOTFILES_DIR}/.dotfiles/.tmux ~/.tmux
-
-# HACK Uncomment this for iTerm2 < v3.5.0.beta
-# ln -s ${DOTFILES_DIR}/iTerm2/auto_change_theme.py ~/Library/ApplicationSupport/iTerm2/Scripts/AutoLaunch/
+ln -s ${DOTFILES_DIR}/.tmux.conf ~/.tmux.conf
+ln -s ${DOTFILES_DIR}/.tmux ~/.tmux
 
 echo -e 'Done.'

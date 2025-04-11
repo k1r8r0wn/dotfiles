@@ -2,22 +2,26 @@
 # Settings
 ##########################################
 
-# Homebrew stuff
-export PATH=/opt/homebrew/bin:$PATH
-export PATH=/opt/homebrew/sbin:$PATH
-
-# PATH for rbenv
-export PATH="$HOME/.rbenv/shims:$PATH"
+# PATH for mise
+eval "$(/opt/homebrew/bin/mise activate zsh)"
 
 # NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-
-# Fix falcon run https://github.com/socketry/falcon/issues/225
-export PGGSSENCMODE="disable"
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 
 # For custom k9s themes
 export XDG_CONFIG_HOME=$HOME/.config
+
+# Fix falcon server run
+# https://github.com/socketry/falcon/issues/225
+export PGGSSENCMODE="disable"
+
+# Fix karafka-rdkafka installation
+# https://github.com/karafka/karafka-rdkafka/issues/126
+# export CPPFLAGS="-I/Library/Developer/CommandLineTools/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/"
+
+# Freeze all string literals globally (may cause some issues)
+# export RUBYOPT=--enable-frozen-string-literal
 
 # Path to your oh-my-zsh installation
 ZSH=$HOME/.oh-my-zsh
@@ -44,15 +48,11 @@ plugins=(
     ruby
     rails
     rake
-    rbenv
     zsh-autosuggestions
     zsh-syntax-highlighting
-    web-search
     kubectl
     vscode
     mix
-    tmux
-    golang
 )
 
 ##########################################
@@ -76,17 +76,17 @@ alias la='ls -lah'
 
 alias ..='cd ../'
 alias ...='cd ../../'
-alias pro='cd ~/Projects'
-alias self='cd ~/Projects/self'
-alias os='cd ~/Projects/os'
-alias dot='cd ~/Projects/self/dotfiles'
-alias tuts='cd ~/Projects/tuts'
 
 alias v='vim'
+alias nm='nvim'
+
 alias gks='git-quick-stats' # https://github.com/arzzen/git-quick-stats
 
 # Gems
 alias gml='gem query --local' # Get the list of installed gems in the system
+
+# Bundler
+alias bou='bundler oudated' # Show all of the outdated gems in the current bundle
 
 # RSpec
 alias b='bundle'
@@ -103,7 +103,7 @@ alias gs='rails graphql:schema:json' # Dump the schema to JSON in ./schema.json
 
 # Rubocop
 alias cop='rubocop'
-alias re='rubocop \--auto-gen-config \--auto-gen-only-exclude \--exclude-limit=10000'
+alias re='rubocop --auto-gen-config --auto-gen-only-exclude --exclude-limit=100000'
 
 # Dev logs
 alias logs='tail -f log/development.log'
@@ -177,6 +177,19 @@ function port () {
         echo 'Specify the port.'
     fi
 }
+
+# ##########################################
+# # Docker stuff
+# ##########################################
+
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=($HOME/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+# Compose now can delegate build to bake for better performances
+export COMPOSE_BAKE=true
 
 ##########################################
 # Private stuff

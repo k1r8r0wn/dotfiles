@@ -154,7 +154,7 @@ function ber() {
     done
 }
 
-# Get the code impact via gir log by given author
+# Get the code impact via git log by given author
 function impact () {
     if [[ $1 > 0 ]]; then
         git log --author="$1" --pretty=tformat: --numstat |

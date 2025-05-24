@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/core'
@@ -13,15 +11,12 @@ brew 'make'
 brew 'node'
 brew 'yarn'
 brew 'rbenv'
+brew 'elixir'
 brew 'postgresql', restart_service: true
 brew 'redis', restart_service: true
 brew 'kubectl'
+brew 'k9s'
 
-cask 'google-chrome'
 cask 'visual-studio-code'
-cask 'iterm2'
-cask 'notion'
-cask 'zoomus'
+cask 'rubymine'
 cask 'docker'
-cask 'dash'
-cask 'insomnia'
